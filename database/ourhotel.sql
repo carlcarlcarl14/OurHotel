@@ -1,0 +1,33 @@
+CREATE DATABASE IF NOT EXISTS ourhotel;
+USE ourhotel;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS admins (
+  admin_id INT AUTO_INCREMENT PRIMARY KEY,
+  admin_username VARCHAR(100) NOT NULL UNIQUE,
+  admin_email VARCHAR(255) NOT NULL UNIQUE,
+  admin_password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS rooms (
+  room_id INT AUTO_INCREMENT PRIMARY KEY,
+  room_name VARCHAR(150) NOT NULL,
+  room_description TEXT NOT NULL,
+  room_price DECIMAL(10,2) NOT NULL,
+  room_img VARCHAR(255) DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS booking (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  check_in_date DATE NOT NULL,
+  check_out_date DATE NOT NULL,
+  number_of_rooms INT NOT NULL
+);

@@ -1,0 +1,138 @@
+:root {
+   --admin-bg-1: #e4eef8;
+   --admin-bg-2: #f7faff;
+   --surface: #ffffff;
+   --surface-soft: #f4f8fc;
+   --ink: #13263a;
+   --muted: #567089;
+   --line: #d8e4f1;
+   --nav-a: #2f79ad;
+   --nav-b: #255f8c;
+   --shadow-soft: 0 12px 24px rgba(16, 38, 60, 0.14);
+}
+
+body {
+   background: radial-gradient(circle at 12% 8%, #d8e8f8 0%, var(--admin-bg-1) 45%, var(--admin-bg-2) 100%);
+   color: var(--ink);
+}
+
+.container-fluid {
+   position: relative;
+}
+
+.bg-info {
+   background: linear-gradient(180deg, #2d77a8, #23577d) !important;
+   box-shadow: 6px 0 20px rgba(10, 30, 50, 0.28);
+}
+
+.nav-pills li a {
+   margin-top: 5px;
+   background-image: linear-gradient(135deg, var(--nav-a), var(--nav-b));
+   border-radius: 8px;
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.14);
+   transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.nav-pills li a:hover {
+   filter: brightness(1.08);
+   transform: translateY(-1px);
+}
+
+#logout-button {
+   background-image: linear-gradient(135deg, #da4b64, #c5351f);
+}
+
+#logout-button:hover {
+   background-image: linear-gradient(135deg, #c5351f, #a92d1a);
+}
+
+.card,
+.table,
+.modal-content,
+.container.bg-light {
+   background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+   border: 1px solid var(--line);
+   box-shadow: var(--shadow-soft);
+}
+
+.table thead tr {
+   background: #e8f2fb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   color: var(--ink);
+}
+
+p,
+td,
+th,
+label,
+span {
+   color: var(--muted);
+}
+
+.form-control,
+.form-select,
+.form-control-file {
+   border: 1px solid #c9d9ea;
+}
+
+.btn-primary {
+   background: linear-gradient(135deg, #2f79ad, #245c87);
+   border: none;
+}
+
+.btn-primary:hover {
+   background: linear-gradient(135deg, #245c87, #1d4a6d);
+}
+
+.over {
+   overflow-y: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+   .fa {
+      font-size: 30px;
+      line-height: 1.5;
+   }
+
+   span {
+      font-size: 30px;
+      display: none;
+   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+   .fa {
+      font-size: 20px;
+      line-height: 2;
+   }
+
+   span {
+      font-size: 20px;
+      font-weight: bold;
+   }
+}
+
+@media only screen and (min-width: 992px) {
+   .fa {
+      font-size: 30px;
+      line-height: 1.5;
+   }
+
+   span {
+      font-size: 30px;
+   }
+}
+
+@media only screen and (max-width: 360px) {
+   .fa {
+      font-size: 20px;
+   }
+}
